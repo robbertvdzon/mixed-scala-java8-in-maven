@@ -1,15 +1,11 @@
 package com.xflin.msjm;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.stream.IntStream;
 
 public class JavaMain {
     public static void main(String[] args) {
         System.out.println("JavaMain starts");
-        List<String> list = new ArrayList<>();
-        list.add("bla1");
-        list.add("bla2");
-        list.stream().forEach(s-> System.out.println(s));
+        IntStream.of(1, 2, 3).forEach(i-> System.out.println(i)); // test java8 code
         new ScalaService().hello();
         System.out.println("JavaMain ends");
     }
